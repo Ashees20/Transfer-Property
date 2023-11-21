@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Transfer DApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Property Transfer DApp</h1>
+
+    <div id="account"></div>
+
+    <div id="allotProperty">
+        <h2>Allot Property</h2>
+        <label for="ownerAddress">Owner Address:</label>
+        <input type="text" id="ownerAddress" placeholder="Owner Address">
+        <br>
+        <label for="propertyName">Property Name:</label>
+        <input type="text" id="propertyName" placeholder="Property Name">
+        <br>
+        <button onclick="allotProperty()">Allot Property</button>
+    </div>
+
+    <div id="transferProperty">
+        <h2>Transfer Property</h2>
+        <label for="toAddress">To Address:</label>
+        <input type="text" id="toAddress" placeholder="To Address">
+        <br>
+        <label for="transferPropertyName">Property Name:</label>
+        <input type="text" id="transferPropertyName" placeholder="Property Name">
+        <br>
+        <button onclick="transferProperty()">Transfer Property</button>
+    </div>
+</body>
+</html>
+
+<!-- Starting migrations...
+======================
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_proptransfer_mig.js
+=====================
+
+   Deploying 'PropertyTransfer'
+   ----------------------------
+   > transaction hash:    0x8e2bcc424eaa579f07530f8e9c8368a9a086552252f7b9da1f884e0d923d1194
+   > Blocks: 2            Seconds: 17
+   > contract address:    0x9F64e99438e330163862f1A0d4854eBa0b642F60
+   > block number:        10030176
+   > block timestamp:     1699787400
+   > account:             0x4376565e07BD1a2B8BEF3fCeE9d15d09a7f70D89
+   > balance:             0.563289054467219149
+   > gas used:            1133149 (0x114a5d)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002832872507932043 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 10030177)
+   > confirmation number: 2 (block: 10030178)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.002832872507932043 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.002832872507932043 ETH -->
+
