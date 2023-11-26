@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     if (window.ethereum) {
         window.web3 = new Web3(window.ethereum);
-
-        // Use the 'disconnect' event instead of 'close'
         window.ethereum.on('disconnect', (error) => {
             console.error('MetaMask disconnected:', error);
         });
@@ -27,7 +25,6 @@ async function loadAccount() {
     const account = accounts[0];
     document.getElementById('account').innerText = 'Your Account: ' + account;
 
-    // Show/hide sections based on whether the user is the owner
     const isOwner = await checkOwnership(account);
     if (isOwner) {
         document.getElementById('allotProperty').style.display = 'block';
@@ -73,7 +70,7 @@ async function transferProperty() {
     loadAccount();
 }
 
-// Replace CONTRACT_ABI and CONTRACT_ADDRESS with the actual ABI and address of your deployed contract
+
 const CONTRACT_ABI = [
     {
         "inputs": [],
@@ -317,5 +314,5 @@ const CONTRACT_ABI = [
         "stateMutability": "nonpayable",
         "type": "function"
       }
-]; // Replace with your contract ABI
+];
 const CONTRACT_ADDRESS = '0x9F64e99438e330163862f1A0d4854eBa0b642F60'; // Replace with your contract address
